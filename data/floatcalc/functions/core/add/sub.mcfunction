@@ -10,7 +10,8 @@ execute store result storage floatcalc:core x[1] int 1 run scoreboard players ge
 execute store result storage floatcalc:core x[2] int 1 run scoreboard players remove #f floatcalc 1073741824
 execute if score #f floatcalc matches -1073741824 run data modify storage floatcalc:core x set value [1,0]
 
-execute if score #f floatcalc matches -1073741823.. run function floatcalc:core/descale/main
+# tellraw @a { "storage":"floatcalc:core","nbt":"x"}
+execute unless score #f floatcalc matches -1073741824 run function floatcalc:core/descale/main
 
 # なぜかこれがないと動かない
 data get storage : {}

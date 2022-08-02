@@ -30,9 +30,9 @@
 # data modify storage floatcalc:test y set value 1f
 # function floatcalc:test/add
 
-data modify storage floatcalc:test x set value 1f
-data modify storage floatcalc:test y set value -1f
-function floatcalc:test/add
+# data modify storage floatcalc:test x set value 1f
+# data modify storage floatcalc:test y set value -1f
+# function floatcalc:test/add
 
 # data modify storage floatcalc:test x set value 1f
 # data modify storage floatcalc:test y set value +1.0e39f
@@ -50,8 +50,8 @@ function floatcalc:test/add
 # data modify storage floatcalc:test y set value 0f
 # function floatcalc:test/add
 
-data modify storage floatcalc:test x set value -1f
-data modify storage floatcalc:test y set value 1f
+data modify storage floatcalc:test x set value 1.647058823145926f
+data modify storage floatcalc:test y set value -2.0f
 function floatcalc:test/add
 
 # data modify storage floatcalc:test x set value -1f

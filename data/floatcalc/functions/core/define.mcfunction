@@ -32,4 +32,5 @@
 #define score_holder #2^4
 #define score_holder #2^7
 #define score_holder #2^8
+#define score_holder #2^15
 #define score_holder #2^16

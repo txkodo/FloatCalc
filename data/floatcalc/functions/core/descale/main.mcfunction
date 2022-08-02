@@ -11,6 +11,8 @@
 execute store result score #f floatcalc run data get storage floatcalc:core x[2]
 scoreboard players add #f floatcalc 1073741824
 
+execute if score #f floatcalc matches ..-1 run function floatcalc:core/descale/invert
+
 execute store result score #e floatcalc run data get storage floatcalc:core x[1]
 
 # e [0,15) -> [15,31)
