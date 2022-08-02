@@ -22,15 +22,18 @@ def inv(f:int):
   if e != 0:
     a -= a // (2 ** 30 // e)
 
-
+  a -= 2
   assert 2**30 <= a < 2**31
-  return abs(1 - a * _f / 2 ** 61)
+
+  # return (a + 2) - 1 / _f * 2 ** 61
+  return 1 - (a + 2) * _f / 2 ** 61
 
 c = 1000000
 i = 0
 for _ in range(c):
   a = inv(randint(2**30,2**31-1))
-  i += log(a,10)
+  # i += log(abs(a))
+  i += a
 print(f'平均誤差(log): {i/c}')
 
 # print(inv(2**30 + 429496704))
