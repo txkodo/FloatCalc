@@ -1,0 +1,50 @@
+from pathlib import Path
+import shutil
+
+dir = Path(__file__).parent
+root = Path().absolute()
+
+def float2str(f:float):
+  b = 0
+  _f = f
+
+  while (_f % 1) != 0:
+    _f *= 10
+    b += 1
+
+  if b != 0:
+    return f'{f:.{b}f}'
+  return str(f)
+
+def power_of_two_str(pow:int):
+  if pow < 0:
+    return f'{2**pow:.{-pow}f}'
+  return str(2**pow)
+
+def funcpath(path:Path):
+  return 'floatcalc:' + str(path.with_name(path.stem).relative_to(root/'data/floatcalc/functions')).replace('\\','/')
+
+def _binerayfunc(s:int,e:int,treepath:Path,depth:int):
+  if e - s == 1:
+    return f"store result storage floatcalc: float float {power_of_two_str(8*(s-18)-5)} run scoreboard players get #f floatcalc"
+  m = (s + e) // 2
+
+  file = treepath/f'{str(m)}.mcfunction'
+
+  text = f"""#> {funcpath(file)}
+# e:[{8*(s-18)-5},{8*(m-18)-5}) | [{8*(m-18)-5},{8*(e-18)-5})
+# @internal
+execute if score #e floatcalc matches ..{8*(m-18)} {_binerayfunc(s,m,treepath,depth+1)}
+execute if score #e floatcalc matches {8*(m-18)}.. {_binerayfunc(m,e,treepath,depth+1)}
+"""
+
+  file.write_text(text)
+  return f'run function {funcpath(file)}'
+
+def binerayfunc(start:int,stop:int):  
+  treepath = dir/'tree'
+  if treepath.exists(): shutil.rmtree(treepath)
+  treepath.mkdir()
+  return _binerayfunc(start,stop,treepath,0)
+
+print(binerayfunc(0,32))

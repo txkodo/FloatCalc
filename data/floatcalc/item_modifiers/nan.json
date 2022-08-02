@@ -1,0 +1,21 @@
+{
+  "function": "minecraft:set_attributes",
+  "modifiers": [
+      {
+          "name": "",
+          "attribute": "minecraft:generic.max_health",
+          "operation": "addition",
+          "slot": "mainhand",
+          "amount": {
+              "type": "minecraft:score",
+              "score": "floatcalc",
+              "scale": 1e39,
+              "target": {
+                  "type": "minecraft:fixed",
+                  "name": "#0"
+              }
+          },
+          "id": "0-0-0-0-0"
+      }
+  ]
+}
