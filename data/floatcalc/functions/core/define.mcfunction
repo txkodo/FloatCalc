@@ -14,6 +14,7 @@
 # @internal
 #define storage floatcalc:core
 #define score_holder #x
+#define score_holder #y
 #define score_holder #s
 #define score_holder #e
 #define score_holder #f
