@@ -26,7 +26,7 @@ def funcpath(path:Path):
 
 def _binerayfunc(s:int,e:int,treepath:Path,depth:int):
   if e - s == 1:
-    return f"store result storage floatcalc: float float {power_of_two_str(8*(s-18)-5)} run scoreboard players get #f floatcalc"
+    return f"store result storage floatcalc:core float float {power_of_two_str(8*(s-18)-5)} run scoreboard players get #f floatcalc"
   m = (s + e) // 2
 
   file = treepath/f'{str(m)}.mcfunction'

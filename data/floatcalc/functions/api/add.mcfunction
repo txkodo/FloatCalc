@@ -7,4 +7,7 @@
 # @output storage floatcalc: x (List[int])
 # @api
 
+data modify storage floatcalc:core x set from storage floatcalc: x
+data modify storage floatcalc:core y set from storage floatcalc: y
 function floatcalc:core/add/main
+data modify storage floatcalc: x set from storage floatcalc:core x

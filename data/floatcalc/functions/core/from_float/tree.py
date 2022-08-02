@@ -29,7 +29,7 @@ def funcpath(path:Path):
 
 def _binerayfunc(s:int,e:int,treepath:Path,depth:int):
   if e - s == 1:
-    return f"store success storage floatcalc: x[1] int {-q(s)} store result score #f floatcalc run data get storage floatcalc: float {power_of_two_str(q(s))}"
+    return f"store success storage floatcalc:core x[1] int {-q(s)} store result score #f floatcalc run data get storage floatcalc:core float {power_of_two_str(q(s))}"
   m = (s + e) // 2
 
   file = treepath/f'{str(m)}.mcfunction'
@@ -38,13 +38,13 @@ def _binerayfunc(s:int,e:int,treepath:Path,depth:int):
     text = f"""#> {funcpath(file)}
 # e:[{-q(s)},{-q(m)}),[{-q(m)},{-q(e)})
 # @internal
-execute store success storage floatcalc: x[1] int {-q(s)} store result score #f floatcalc run data get storage floatcalc: float {power_of_two_str(q(s))}
+execute store success storage floatcalc:core x[1] int {-q(s)} store result score #f floatcalc run data get storage floatcalc:core float {power_of_two_str(q(s))}
 execute unless score #f floatcalc matches -2147483520..2147483520 {_binerayfunc(m,e,treepath,depth+1)}"""
   else:
     text = f"""#> {funcpath(file)}
 # e:[{-q(s)},{-q(m)}),[{-q(m)},{-q(e)})
 # @internal
-execute store result score #f floatcalc run data get storage floatcalc: float {power_of_two_str(q(m))}
+execute store result score #f floatcalc run data get storage floatcalc:core float {power_of_two_str(q(m))}
 execute if score #f floatcalc matches -2147483520..2147483520 {_binerayfunc(s,m,treepath,depth+1)}
 execute unless score #f floatcalc matches -2147483520..2147483520 {_binerayfunc(m,e,treepath,depth+1)}"""
 

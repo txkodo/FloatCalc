@@ -8,4 +8,6 @@
 # @output storage floatcalc: float (float)
 # @api
 
+data modify storage floatcalc:core x set from storage floatcalc: x
 function floatcalc:core/to_float/main
+data modify storage floatcalc: float set from storage floatcalc:core float
