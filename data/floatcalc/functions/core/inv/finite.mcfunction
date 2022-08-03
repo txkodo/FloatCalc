@@ -8,6 +8,7 @@ execute store result score #ff floatcalc store result score #_ floatcalc store r
 scoreboard players add #_ floatcalc 1073741824
 scoreboard players operation #_ floatcalc /= #2^15 floatcalc
 scoreboard players add #_ floatcalc 1
+
 scoreboard players set #a floatcalc 1073741824
 scoreboard players operation #a floatcalc /= #_ floatcalc
 execute store result score #b floatcalc run scoreboard players operation #a floatcalc *= #2^15 floatcalc
@@ -19,19 +20,20 @@ scoreboard players operation #b floatcalc /= #2^15 floatcalc
 scoreboard players operation #f floatcalc /= #2^15 floatcalc
 
 scoreboard players operation #bb floatcalc %= #2^15 floatcalc
-scoreboard players operation #bb floatcalc *= #f floatcalc
-scoreboard players operation #bb floatcalc /= #2^15 floatcalc
-
 scoreboard players operation #ff floatcalc %= #2^15 floatcalc
+
+scoreboard players operation #bb floatcalc *= #f floatcalc
 scoreboard players operation #ff floatcalc *= #b floatcalc
-scoreboard players operation #ff floatcalc /= #2^15 floatcalc
+
+scoreboard players operation #bb floatcalc += #ff floatcalc
+
+scoreboard players operation #bb floatcalc /= #2^15 floatcalc
 
 scoreboard players operation #b floatcalc *= #f floatcalc
 
 scoreboard players operation #e floatcalc += #b floatcalc
 
 scoreboard players operation #e floatcalc += #bb floatcalc
-scoreboard players operation #e floatcalc += #ff floatcalc
 
 scoreboard players operation #a floatcalc += #a floatcalc
 

@@ -1,12 +1,301 @@
-
-data modify storage floatcalc: float set from storage floatcalc:test y
-function floatcalc:api/from_float
-data modify storage floatcalc: y set from storage floatcalc: x
-
-data modify storage floatcalc: float set from storage floatcalc:test x
-function floatcalc:api/from_float
-
-function floatcalc:api/sub
-
-function floatcalc:api/to_float
-tellraw @s [{"storage":"floatcalc:test","nbt":"x"}," - ",{"storage":"floatcalc:test","nbt":"y"}," -> ",{"storage":"floatcalc:","nbt":"float"}]
+data modify storage floatcalc:test x set value 0f
+  data modify storage floatcalc:test y set value 0f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value 0f
+  data modify storage floatcalc:test y set value 1f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value 0f
+  data modify storage floatcalc:test y set value -1f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value 0f
+  data modify storage floatcalc:test y set value +1.0e38f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value 0f
+  data modify storage floatcalc:test y set value -1.0e38f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value 0f
+  data modify storage floatcalc:test y set value +1.5e-45f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value 0f
+  data modify storage floatcalc:test y set value -1.5e-45f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value 0f
+  data modify storage floatcalc:test y set from storage floatcalc:core NaNf
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value 1f
+  data modify storage floatcalc:test y set value 0f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value 1f
+  data modify storage floatcalc:test y set value 1f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value 1f
+  data modify storage floatcalc:test y set value -1f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value 1f
+  data modify storage floatcalc:test y set value +1.0e38f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value 1f
+  data modify storage floatcalc:test y set value -1.0e38f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value 1f
+  data modify storage floatcalc:test y set value +1.5e-45f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value 1f
+  data modify storage floatcalc:test y set value -1.5e-45f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value 1f
+  data modify storage floatcalc:test y set from storage floatcalc:core NaNf
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -1f
+  data modify storage floatcalc:test y set value 0f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -1f
+  data modify storage floatcalc:test y set value 1f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -1f
+  data modify storage floatcalc:test y set value -1f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -1f
+  data modify storage floatcalc:test y set value +1.0e38f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -1f
+  data modify storage floatcalc:test y set value -1.0e38f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -1f
+  data modify storage floatcalc:test y set value +1.5e-45f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -1f
+  data modify storage floatcalc:test y set value -1.5e-45f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -1f
+  data modify storage floatcalc:test y set from storage floatcalc:core NaNf
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value +1.0e38f
+  data modify storage floatcalc:test y set value 0f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value +1.0e38f
+  data modify storage floatcalc:test y set value 1f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value +1.0e38f
+  data modify storage floatcalc:test y set value -1f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value +1.0e38f
+  data modify storage floatcalc:test y set value +1.0e38f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value +1.0e38f
+  data modify storage floatcalc:test y set value -1.0e38f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value +1.0e38f
+  data modify storage floatcalc:test y set value +1.5e-45f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value +1.0e38f
+  data modify storage floatcalc:test y set value -1.5e-45f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value +1.0e38f
+  data modify storage floatcalc:test y set from storage floatcalc:core NaNf
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -1.0e38f
+  data modify storage floatcalc:test y set value 0f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -1.0e38f
+  data modify storage floatcalc:test y set value 1f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -1.0e38f
+  data modify storage floatcalc:test y set value -1f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -1.0e38f
+  data modify storage floatcalc:test y set value +1.0e38f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -1.0e38f
+  data modify storage floatcalc:test y set value -1.0e38f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -1.0e38f
+  data modify storage floatcalc:test y set value +1.5e-45f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -1.0e38f
+  data modify storage floatcalc:test y set value -1.5e-45f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -1.0e38f
+  data modify storage floatcalc:test y set from storage floatcalc:core NaNf
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value +1.5e-45f
+  data modify storage floatcalc:test y set value 0f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value +1.5e-45f
+  data modify storage floatcalc:test y set value 1f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value +1.5e-45f
+  data modify storage floatcalc:test y set value -1f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value +1.5e-45f
+  data modify storage floatcalc:test y set value +1.0e38f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value +1.5e-45f
+  data modify storage floatcalc:test y set value -1.0e38f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value +1.5e-45f
+  data modify storage floatcalc:test y set value +1.5e-45f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value +1.5e-45f
+  data modify storage floatcalc:test y set value -1.5e-45f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value +1.5e-45f
+  data modify storage floatcalc:test y set from storage floatcalc:core NaNf
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -1.5e-45f
+  data modify storage floatcalc:test y set value 0f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -1.5e-45f
+  data modify storage floatcalc:test y set value 1f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -1.5e-45f
+  data modify storage floatcalc:test y set value -1f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -1.5e-45f
+  data modify storage floatcalc:test y set value +1.0e38f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -1.5e-45f
+  data modify storage floatcalc:test y set value -1.0e38f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -1.5e-45f
+  data modify storage floatcalc:test y set value +1.5e-45f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -1.5e-45f
+  data modify storage floatcalc:test y set value -1.5e-45f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -1.5e-45f
+  data modify storage floatcalc:test y set from storage floatcalc:core NaNf
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set from storage floatcalc:core NaNf
+  data modify storage floatcalc:test y set value 0f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set from storage floatcalc:core NaNf
+  data modify storage floatcalc:test y set value 1f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set from storage floatcalc:core NaNf
+  data modify storage floatcalc:test y set value -1f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set from storage floatcalc:core NaNf
+  data modify storage floatcalc:test y set value +1.0e38f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set from storage floatcalc:core NaNf
+  data modify storage floatcalc:test y set value -1.0e38f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set from storage floatcalc:core NaNf
+  data modify storage floatcalc:test y set value +1.5e-45f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set from storage floatcalc:core NaNf
+  data modify storage floatcalc:test y set value -1.5e-45f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set from storage floatcalc:core NaNf
+  data modify storage floatcalc:test y set from storage floatcalc:core NaNf
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value 0.01f
+  data modify storage floatcalc:test y set value 0.01f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value 0.01f
+  data modify storage floatcalc:test y set value 1f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value 0.01f
+  data modify storage floatcalc:test y set value 100f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value 0.01f
+  data modify storage floatcalc:test y set value -0.01f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value 0.01f
+  data modify storage floatcalc:test y set value -1f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value 0.01f
+  data modify storage floatcalc:test y set value -100f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value 1f
+  data modify storage floatcalc:test y set value 0.01f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value 1f
+  data modify storage floatcalc:test y set value 1f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value 1f
+  data modify storage floatcalc:test y set value 100f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value 1f
+  data modify storage floatcalc:test y set value -0.01f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value 1f
+  data modify storage floatcalc:test y set value -1f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value 1f
+  data modify storage floatcalc:test y set value -100f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value 100f
+  data modify storage floatcalc:test y set value 0.01f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value 100f
+  data modify storage floatcalc:test y set value 1f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value 100f
+  data modify storage floatcalc:test y set value 100f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value 100f
+  data modify storage floatcalc:test y set value -0.01f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value 100f
+  data modify storage floatcalc:test y set value -1f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value 100f
+  data modify storage floatcalc:test y set value -100f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -0.01f
+  data modify storage floatcalc:test y set value 0.01f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -0.01f
+  data modify storage floatcalc:test y set value 1f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -0.01f
+  data modify storage floatcalc:test y set value 100f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -0.01f
+  data modify storage floatcalc:test y set value -0.01f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -0.01f
+  data modify storage floatcalc:test y set value -1f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -0.01f
+  data modify storage floatcalc:test y set value -100f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -1f
+  data modify storage floatcalc:test y set value 0.01f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -1f
+  data modify storage floatcalc:test y set value 1f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -1f
+  data modify storage floatcalc:test y set value 100f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -1f
+  data modify storage floatcalc:test y set value -0.01f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -1f
+  data modify storage floatcalc:test y set value -1f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -1f
+  data modify storage floatcalc:test y set value -100f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -100f
+  data modify storage floatcalc:test y set value 0.01f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -100f
+  data modify storage floatcalc:test y set value 1f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -100f
+  data modify storage floatcalc:test y set value 100f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -100f
+  data modify storage floatcalc:test y set value -0.01f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -100f
+  data modify storage floatcalc:test y set value -1f
+  function floatcalc:test/sub.each
+  data modify storage floatcalc:test x set value -100f
+  data modify storage floatcalc:test y set value -100f
+  function floatcalc:test/sub.each
+  
