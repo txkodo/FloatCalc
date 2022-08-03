@@ -5,22 +5,22 @@
 # print(2**-24*(2**30+603979776))
 
 
-# def a(a:float):
-#   print(a)
-#   i = 0
-#   while True:
-#     v = a * 2 ** i
-#     if 2**30 <= v < 2**31:
-#       r = [1,-i,int(v)-2**30]
-#       print(r)
-#       print(2**r[1]*(2**30+r[2]))
-#       return
-#     if v < 2**30:
-#       i+= 1
-#     else:
-#       i -= 1
+def a(a:float):
+  print(a)
+  i = 0
+  while True:
+    v = a * 2 ** i
+    if 2**30 <= v < 2**31:
+      r = [1,-i,int(v)-2**30]
+      print(r)
+      print(2**r[1]*(2**30+r[2]))
+      return
+    if v < 2**30:
+      i+= 1
+    else:
+      i -= 1
 
-# a(2)
+# a(0.043035666028 )
 
 
 def t(e:int,f:int):
@@ -59,4 +59,6 @@ def t(e:int,f:int):
 # q = div(5,4)
 # print(q)
 
+print(2**30)
+print(2**26)
 print(2**30)

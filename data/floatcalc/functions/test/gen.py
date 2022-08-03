@@ -100,6 +100,8 @@ def export_tests():
     ('inv','1 /'),
     ('neg','-'),
     ('abs','abs'),
+    ('sqrt','sqrt'),
+    ('sqrt.fast','sqrt.fast'),
   ]
 
   for op,sign in binaryOps:

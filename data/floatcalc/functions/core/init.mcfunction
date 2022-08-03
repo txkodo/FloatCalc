@@ -18,7 +18,15 @@ scoreboard players set #2^3 floatcalc 8
 scoreboard players set #2^4 floatcalc 16
 scoreboard players set #2^7 floatcalc 128
 scoreboard players set #2^8 floatcalc 256
+scoreboard players set #2^14 floatcalc 16384
 scoreboard players set #2^15 floatcalc 32768
 scoreboard players set #2^16 floatcalc 65536
+scoreboard players set #2^19 floatcalc 524288
+scoreboard players set #2^20 floatcalc 1048576
+scoreboard players set #2^25 floatcalc 33554432
+scoreboard players set #2^26 floatcalc 67108864
+scoreboard players set #2^28 floatcalc 268435456
+scoreboard players set #2^29 floatcalc 536870912
+scoreboard players set #-2^31 floatcalc -2147483648
 
 function floatcalc:core/nan
