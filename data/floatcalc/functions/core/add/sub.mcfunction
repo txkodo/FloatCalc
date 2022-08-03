@@ -12,6 +12,3 @@ execute if score #f floatcalc matches -1073741824 run data modify storage floatc
 
 # tellraw @a { "storage":"floatcalc:core","nbt":"x"}
 execute unless score #f floatcalc matches -1073741824 run function floatcalc:core/descale/main
-
-# なぜかこれがないと動かない
-data get storage : {}
