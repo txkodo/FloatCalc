@@ -50,7 +50,7 @@ Nbtのfloatの値をこのデータパック用のデータ構造(後述)に変�
 
 このデータパックではfloatの値を直接計算できないため、このファンクションで変換した値を用いて計算を行う
 
-```
+```mcfunction
 # 引数
 data modify storage floatcalc: float set ...
 
@@ -68,7 +68,7 @@ data get storage floatcalc: x
 
 計算が終わったらこのファンクションを実行することでfloatの値を得る
 
-```
+```mcfunction
 # 引数
 data modify storage floatcalc: x set ...
 
