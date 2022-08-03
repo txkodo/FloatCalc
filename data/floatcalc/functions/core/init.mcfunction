@@ -1,3 +1,10 @@
+#> floatcalc:core/init
+# @internal
+
+tellraw @a "floatcalc is successfully installed !"
+execute unless data storage floatcalc:core {version:"develop"} run data modify storage floatcalc:core version set value "1.0"
+
+scoreboard objectives remove floatcalc
 scoreboard objectives add floatcalc dummy
 
 scoreboard players set #0 floatcalc 0
