@@ -219,3 +219,42 @@ execute unless data storage namespace x[1] if data storage namespace {x:[1]} -> 
 execute unless data storage namespace x[1] if data storage amespace {x:[-1]} -> -Infinityなら通る
 
 ```
+
+# ライセンス
+
+本データパックはMITライセンスを採用しています
+
+以下超要約
+
+> 複製 / 複写 / 変更 / 結合 / 掲載 / 頒布 / サブライセンス / 販売 全部OK
+> 
+> その代わり責任は負わないよ
+>
+> 改変したときは、LICENCEファイルの ` 2022 @txkodo ` の一行上に同じように日付と名前を書いてね
+
+# さいごに
+計算結果の照合はしているつもりですが、まだバグが残っているかもしれません
+
+計算結果がおかしかったら、(@txkodo)[https://mobile.twitter.com/txkodo]まで報告お願いします！！！！！
+
+修正できそうだったらプルリクを(殴
+
+他にも欲しい関数あったら教えてください！やれそうなら頑張ってみます
+
+
+##### まだないけど作りたい関数リスト
++ round
++ floor
++ ceil
++ shift
++ sin
++ cos
++ tan
++ asin
++ acos
++ atan
++ atan2
++ log
++ lg
++ exp
++ pow
