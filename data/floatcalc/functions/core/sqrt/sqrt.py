@@ -187,44 +187,7 @@ def osqrt(n0:int) -> int:
 
   return a
 
-
-
-# def isqrt_aux(c, n):
-#   k = (c - 1) // 2
-#   a = isqrt_aux(c // 2, n >> 2 * k + 2)
-#   return (a << k) + (n >> k+2) // a
-
-# def _esqrt(n:int):
-#   assert 2**30 < n < 2**31
-#   n <<= 32
-
-#   n0 = n
-#   n1 = n0 >> 30
-#   n2 = n1 >> 16
-#   n3 = n2 >> 8
-
-#   # isqrt_aux(30, n0) k = 14
-#   # isqrt_aux(15, n1) k = 7
-#   # isqrt_aux(7, n2) k = 3
-#   # isqrt_aux(3, n3)
-
-#   return (a << 3) + (n2 >> 5) // a
-#   return (a << 7) + (n1 >> 9) // a
-#   return (a << 14) + (n0 >> 16) // a
-
-
-#   return a - 1 if n < a * a else a
-
-# for _ in range(100):
-#   i = randint(2**30,2**31-1)
-
-#   a = _esqrt(i)/2**16
-
-#   print(f'{i} {a**2}' )
-
-
-
-def _isqrt(n:int):
+def _esqrt(n:int):
   assert 2**30 < n < 2**31
 
   n0 = n << 16
@@ -233,25 +196,14 @@ def _isqrt(n:int):
   n3 = n >> 25
   n4 = n >> 28
 
-  # a = isqrt_aux(31, n0) k:15
-  # a = isqrt_aux(15, n1) k:7
-  # a = isqrt_aux(7, n2) k: 3
-  # a = isqrt_aux(3, n3) k: 1
-  # a = isqrt_aux(1, n4) k:0
   a = 1
-  a = (a << 0) + (n4) // a
-  a = (a << 1) + (n3) // a
-  a = (a << 3) + (n2) // a
-  a = (a << 7) + (n1) // a
-  a = (a << 14) + (n0) // a
+  a = (a << 0) + n4 // a
+  a = (a << 1) + n3 // a
+  a = (a << 3) + n2 // a
+  a = (a << 7) + n1 // a
+  a = (a << 14) + n0 // a
 
   return a
-
-
-def isqrt_aux(c, n):
-  k = (c - 1) // 2
-  a = isqrt_aux(c // 2, n >> 2 * k + 2)
-  return (a << k) + (n >> k+2) // a
 
 def _osqrt(n:int):
   assert 2**30 < n < 2**31
@@ -268,12 +220,11 @@ def _osqrt(n:int):
   # a = isqrt_aux(3, n3) k: 1
   # a = isqrt_aux(1, n4) k:0
   a = 1
-  a = (a << 0) + (n4) // a
-  a = (a << 1) + (n3) // a
-  a = (a << 3) + (n2) // a
-  a = (a << 7) + (n1) // a
-  a = (a << 15) + (n0) // a
-
+  a = (a << 0) + n4 // a
+  a = (a << 1) + n3 // a
+  a = (a << 3) + n2 // a
+  a = (a << 7) + n1 // a
+  a = (a << 15) + n0 // a
   return a
 
 

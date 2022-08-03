@@ -30,3 +30,9 @@ scoreboard players set #2^29 floatcalc 536870912
 scoreboard players set #-2^31 floatcalc -2147483648
 
 function floatcalc:core/nan
+
+data modify storage floatcalc: NAN set value []
+data modify storage floatcalc: ZERO set value [1,0]
+data modify storage floatcalc: INFINITY set value [1]
+data modify storage floatcalc: -INFINITY set value [-1]
+data modify storage floatcalc: PI set value [1,-29,612887889]

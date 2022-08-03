@@ -5,6 +5,9 @@
 # print(2**-24*(2**30+603979776))
 
 
+from math import log, pi
+
+
 def a(a:float):
   print(a)
   i = 0
@@ -59,6 +62,11 @@ def t(e:int,f:int):
 # q = div(5,4)
 # print(q)
 
-print(2**30)
-print(2**26)
-print(2**30)
+# print(2**30)
+# print(2**26)
+
+print( pi * 2 ** 29 - 2**30)
+
+print(2**-29*( 2**30 + 612887889))
+
+[1,-29,612887889]
