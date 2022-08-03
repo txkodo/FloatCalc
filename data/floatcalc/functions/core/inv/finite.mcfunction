@@ -40,8 +40,7 @@ scoreboard players operation #a floatcalc += #a floatcalc
 execute unless score #e floatcalc matches 0 run function floatcalc:core/inv/next
 
 # 2 ^ 30 + 2
-scoreboard players remove #a floatcalc 1073741826
-execute store result storage floatcalc:core x[2] int 1 run scoreboard players get #a floatcalc
+execute store result storage floatcalc:core x[2] int 1 run scoreboard players remove #a floatcalc 1073741826
 
 # 指数をそろえる
 execute store result score #_ floatcalc run data get storage floatcalc:core x[1]
