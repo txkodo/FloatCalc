@@ -1,7 +1,7 @@
 #> floatcalc:core/from_float/finite
 # @internal
 
-data modify storage floatcalc:core x set value [1,0,0]
+data modify storage floatcalc:core x set value [I;1,0,0]
 
 function floatcalc:core/from_float/tree/16
 execute if score #f floatcalc matches ..-1 store success storage floatcalc:core x[0] int -1 run scoreboard players operation #f floatcalc *= #-1 floatcalc

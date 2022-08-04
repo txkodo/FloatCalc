@@ -6,9 +6,9 @@
 #
 # fが負数になる可能性あり
 #
-# @input storage floatcalc:core x (List[int])
+# @input storage floatcalc:core x (IntArray)
 # @input score #e floatcalc
-# @output storage floatcalc:core x (List[int])
+# @output storage floatcalc:core x (IntArray)
 # @internal
 
 execute store result score #f floatcalc run data get storage floatcalc:core x[2]

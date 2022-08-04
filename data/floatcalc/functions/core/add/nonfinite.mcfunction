@@ -6,10 +6,10 @@ scoreboard players set #_ floatcalc 0
 data modify storage floatcalc:core tx set from storage floatcalc:core x
 
 # x == +Inf & (y == NaN | y == -Inf) : NaN
-execute unless data storage floatcalc:core x[1] if data storage floatcalc:core {x:[1]} unless data storage floatcalc:core y[1] unless data storage floatcalc:core {y:[1]} run data modify storage floatcalc:core tx set value []
+execute unless data storage floatcalc:core x[1] if data storage floatcalc:core {x:[I;1]} unless data storage floatcalc:core y[1] unless data storage floatcalc:core {y:[I;1]} run data modify storage floatcalc:core tx set value [I;]
 
 # x == -Inf & (y == NaN | y == +Inf) : NaN
-execute unless data storage floatcalc:core x[1] if data storage floatcalc:core {x:[-1]} unless data storage floatcalc:core y[1] unless data storage floatcalc:core {y:[-1]} run data modify storage floatcalc:core tx set value []
+execute unless data storage floatcalc:core x[1] if data storage floatcalc:core {x:[I;-1]} unless data storage floatcalc:core y[1] unless data storage floatcalc:core {y:[I;-1]} run data modify storage floatcalc:core tx set value [I;]
 
 # x == 0 | x == Num
 execute if data storage floatcalc:core x[1] run data modify storage floatcalc:core tx set from storage floatcalc:core y
@@ -18,6 +18,6 @@ execute if data storage floatcalc:core x[1] run data modify storage floatcalc:co
 execute if data storage floatcalc:core x[2] if data storage floatcalc:core y[1] run data modify storage floatcalc:core tx set from storage floatcalc:core x
 
 # x == NaN
-execute unless data storage floatcalc:core x[0] run data modify storage floatcalc:core tx set value []
+execute unless data storage floatcalc:core x[0] run data modify storage floatcalc:core tx set value [I;]
 
 data modify storage floatcalc:core x set from storage floatcalc:core tx

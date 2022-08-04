@@ -1,12 +1,12 @@
 #> floatcalc:api/sub
 # 
-# 本データパック用の浮動小数データ(List[int])どうしを減算する
+# 本データパック用の浮動小数データ(IntArray)どうしを減算する
 #
 # x - y
 # 
-# @input storage floatcalc: x (List[int])
-# @input storage floatcalc: y (List[int])
-# @output storage floatcalc: x (List[int])
+# @input storage floatcalc: x (IntArray)
+# @input storage floatcalc: y (IntArray)
+# @output storage floatcalc: x (IntArray)
 # @api
 
 data modify storage floatcalc:core x set from storage floatcalc: x

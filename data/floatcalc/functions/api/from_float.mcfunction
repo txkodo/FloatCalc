@@ -1,11 +1,11 @@
 #> floatcalc:api/from_float
 # 
-# Nbtのfloatを本データパック用の浮動小数データ(List[int])に変換する
+# Nbtのfloatを本データパック用の浮動小数データ(IntArray)に変換する
 # 
 # floatcalc:api/to_floatによって逆変換が可能
 # 
 # @input storage floatcalc: float (float)
-# @output storage floatcalc: x (List[int])
+# @output storage floatcalc: x (IntArray)
 # @api
 
 data modify storage floatcalc:core float set from storage floatcalc: float

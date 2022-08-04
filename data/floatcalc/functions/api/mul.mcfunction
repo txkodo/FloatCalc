@@ -1,10 +1,10 @@
 #> floatcalc:api/mul
 # 
-# 本データパック用の浮動小数データ(List[int])どうしを乗算する
+# 本データパック用の浮動小数データ(IntArray)どうしを乗算する
 # 
-# @input storage floatcalc: x (List[int])
-# @input storage floatcalc: y (List[int])
-# @output storage floatcalc: x (List[int])
+# @input storage floatcalc: x (IntArray)
+# @input storage floatcalc: y (IntArray)
+# @output storage floatcalc: x (IntArray)
 # @api
 
 data modify storage floatcalc:core x set from storage floatcalc: x

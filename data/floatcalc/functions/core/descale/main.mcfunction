@@ -4,8 +4,8 @@
 # 
 # 指数が元の数値の指数より大きくなる可能性がある
 #
-# @input storage floatcalc:core x (List[int])
-# @output storage floatcalc:core x (List[int])
+# @input storage floatcalc:core x (IntArray)
+# @output storage floatcalc:core x (IntArray)
 # @internal
 
 execute store result score #f floatcalc run data get storage floatcalc:core x[2]

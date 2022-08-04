@@ -1,11 +1,11 @@
 #> floatcalc:api/neg
 # 
-# 本データパック用の浮動小数データ(List[int])の符号を反転させる
+# 本データパック用の浮動小数データ(IntArray)の符号を反転させる
 #
 # (x) => -x
 # 
-# @input storage floatcalc: x (List[int])
-# @output storage floatcalc: x (List[int])
+# @input storage floatcalc: x (IntArray)
+# @output storage floatcalc: x (IntArray)
 # @api
 
 data modify storage floatcalc:core x set from storage floatcalc: x

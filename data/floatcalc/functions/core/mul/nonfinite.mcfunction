@@ -21,5 +21,5 @@ execute unless data storage floatcalc:core x[0] run scoreboard players set #_ fl
 execute unless data storage floatcalc:core y[0] run scoreboard players set #_ floatcalc 0
 
 execute if score #_ floatcalc matches 4 run function floatcalc:core/mul/infinite
-execute if score #_ floatcalc matches ..-1 run data modify storage floatcalc:core x set value [1,0]
-execute if score #_ floatcalc matches 0 run data modify storage floatcalc:core x set value []
+execute if score #_ floatcalc matches ..-1 run data modify storage floatcalc:core x set value [I;1,0]
+execute if score #_ floatcalc matches 0 run data modify storage floatcalc:core x set value [I;]
