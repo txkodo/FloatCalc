@@ -160,16 +160,16 @@ data get storage floatcalc: PI
 ```
 
 # 内部データ
-本データパックで使用する計算用データは`List[Int]`となる
+本データパックで使用する計算用データは`IntArray`となる
 
 下記の規則に従ったデータのみを扱う。下記以外の構造のデータが入った時のバリデーションはしていないため注意。
 
 ```
-[]      : NaN
-[1]     : Infinity
-[-1]    : -Infinity
-[1,0]   : 0
-[s,e,f] : s * 2^e * (2^30 + f) 
+[I;]      : NaN
+[I;1]     : Infinity
+[I;-1]    : -Infinity
+[I;1,0]   : 0
+[I;s,e,f] : s * 2^e * (2^30 + f) 
           | s = {-1,1}, f = [0..2**30)
 ```
 
@@ -182,7 +182,7 @@ floatのほうがデータ量が少ないため、floatに変換すると精度�
 ### 数の事前変換
 from_floatを使わずに事前に計算用データを計算できる
 
-任意の小数`v`に対し下記条件を満たす`[s,e,f]`の組が計算データの値となる。
+任意の小数`v`に対し下記条件を満たす`[I;s,e,f]`の組が計算データの値となる。
 ```
 v = s * 2^e * (2^30 + f) 
 
@@ -198,7 +198,7 @@ f : 仮数 [0..2^30)
 1 = 1 * 2^-30 * (2^30 + 0)
 ```
 
-上記の式を満たすので計算用データは`[1,-30,0]`となる。
+上記の式を満たすので計算用データは`[I;1,-30,0]`となる。
 
 ### 数値の絞りこみ
 内部データの構造を生かし、floatに変換せずに数値を絞り込むこともできる
@@ -214,9 +214,9 @@ execute unless data storage namespace x[0] -> NaNなら通る
 
 execute unless data storage namespace x[2] if data storage namespace x[1] -> 0なら通る
 
-execute unless data storage namespace x[1] if data storage namespace {x:[1]} -> +Infinityなら通る
+execute unless data storage namespace x[1] if data storage namespace {x:[I;1]} -> +Infinityなら通る
 
-execute unless data storage namespace x[1] if data storage amespace {x:[-1]} -> -Infinityなら通る
+execute unless data storage namespace x[1] if data storage amespace {x:[I;-1]} -> -Infinityなら通る
 
 ```
 
